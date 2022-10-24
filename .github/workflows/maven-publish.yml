@@ -77,16 +77,16 @@ jobs:
   #          GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
 
-  release-on-push:
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
-    steps:
-      - uses: rymndhng/release-on-push-action@master
-        id: release
-        with:
-          bump_version_scheme: minor
-          tag_prefix: ""
+#  release-on-push:
+#    runs-on: ubuntu-latest
+#    env:
+#      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+#    steps:
+#      - uses: rymndhng/release-on-push-action@master
+#        id: release
+#        with:
+#          bump_version_scheme: minor
+#          tag_prefix: ""
 
 
   publish:

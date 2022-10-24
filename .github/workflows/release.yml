@@ -5,7 +5,8 @@ name: Release Maven Package
 
 on:
   push:
-    tags: *
+    tags:
+      - '*'
 
   publish:
     runs-on: ubuntu-latest

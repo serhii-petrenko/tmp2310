@@ -98,7 +98,12 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.0.2
+      - name: Release
+        uses: softprops/action-gh-release@master
+        with:
+          generate_release_notes: true
+          token: ${{ secrets.TOKEN }}
 
       - name: Set up JDK 11
         uses: actions/setup-java@v3
@@ -114,9 +119,10 @@ jobs:
           
           mvn -V -B release:prepare -DtagNameFormat=@{project.version} -Darguments=-DskipTests -DpushChanges=false
           mvn -V -B release:clean
+          
           git push
           git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          MAVEN_USERNAME: serhii-petrenko
-          MAVEN_PASSWORD: ${{ secrets.TOKEN }}
+#          MAVEN_USERNAME: serhii-petrenko
+#          MAVEN_PASSWORD: ${{ secrets.TOKEN }}

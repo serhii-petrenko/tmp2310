@@ -9,7 +9,7 @@
 <!--	</parent>-->
 	<groupId>ua.javaclub</groupId>
 	<artifactId>tmp2310</artifactId>
-	<version>0.8.1</version>
+	<version>0.8.2-SNAPSHOT</version>
 	<name>tmp2310</name>
 	<description>Demo project</description>
 
@@ -17,7 +17,7 @@
 		<url>https://maven.pkg.github.com/serhii-petrenko/tmp2310</url>
 		<connection>scm:git:git@github.com:serhii-petrenko/tmp2310.git</connection>
 		<developerConnection>scm:git:git@github.com:serhii-petrenko/tmp2310.git</developerConnection>
-		<tag>0.8.1</tag>
+		<tag>v0.6.0</tag>
 	</scm>
 
 	<properties>
